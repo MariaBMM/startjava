@@ -85,32 +85,31 @@ class VariablesTheme {
         char symbol3 = '@';
         char symbol4 = '^';
         char symbol5 = '_';
-        System.out.println((int)symbol1);
-        System.out.println((int)symbol2);
-        System.out.println((int)symbol3);
-        System.out.println((int)symbol4);
-        System.out.println((int)symbol5);
+        System.out.println((int) symbol1 + " " + symbol1);
+        System.out.println((int) symbol2 + " " + symbol2);
+        System.out.println((int) symbol3 + " " + symbol3);
+        System.out.println((int) symbol4 + " " + symbol4);
+        System.out.println((int) symbol5 + " " + symbol5);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка\n");
-        char forwSlash = '/';
+        char slash = '/';
         char backslash= '\\';
         char underscore = '_';
         char openParenthesis = '(';
         char closeParenthesis = ')';
-        System.out.println("    " + forwSlash + backslash + "\n   " + forwSlash + "  " + 
-        backslash+ "\n  " + forwSlash + underscore + openParenthesis + " " + 
-        closeParenthesis + backslash + "\n " + forwSlash + "      " + backslash + "\n" + 
-        forwSlash + underscore + underscore + underscore + underscore + forwSlash + backslash 
-        + underscore + underscore + backslash);
-        
-        
+        System.out.println("    " + slash + backslash + "\n   " + slash + "  " + 
+                backslash+ "\n  " + slash + underscore + openParenthesis + " " + 
+                closeParenthesis + backslash + "\n " + slash + "      " + backslash + "\n" + 
+                slash + underscore + underscore + underscore + underscore + slash + 
+                backslash + underscore + underscore + backslash);
+
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа\n");
         int srcNum = 123;
         int hundreds = srcNum / 100;
         int tens = (srcNum % 100) / 10;
         int ones = srcNum % 10;
         System.out.println("Число 123 содержит:\n" + hundreds + " сотен\n" + tens + 
-        " десятков\n" + ones + " единиц");
+                " десятков\n" + ones + " единиц");
         System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
         System.out.println("Произведение = " + (hundreds * tens * ones));
 
