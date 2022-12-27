@@ -42,19 +42,15 @@ class VariablesTheme {
         long maxLong = 9223372036854775807l;
         System.out.println("Первоначальное значение типа byte " + maxByte);
         System.out.println("Значение после инкремента типа byte " + ++maxByte);
-        --maxByte;
         System.out.println("Значение после декремента типа byte " + --maxByte);
         System.out.println("\nПервоначальное значение типа short " + maxShort);
         System.out.println("Значение после инкремента типа short " + ++maxShort);
-         --maxShort;
         System.out.println("Значение после декремента типа short " + --maxShort); 
         System.out.println("\nПервоначальное значение типа int " + maxInt);
         System.out.println("Значение после инкремента типа int " + ++maxInt);
-        --maxInt;
         System.out.println("Значение после декремента типа int " + --maxInt);
         System.out.println("\nПервоначальное значение типа long " + maxLong);
         System.out.println("Значение после инкремента типа long " + ++maxLong);
-        --maxLong;
         System.out.println("Значение после декремента типа long " + --maxLong);
 
         System.out.println("\n5. Перестановка значений переменных\n");
