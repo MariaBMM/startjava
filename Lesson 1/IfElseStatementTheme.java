@@ -47,14 +47,15 @@ class IfElseStatementTheme {
 
         System.out.println("\n3. Проверка числа\n");
         int num = 89;
+        System.out.print("Число " + num);
 
         if (num == 0) {
-            System.out.println("Число " + num + " равно нулю");
+            System.out.println(" равно нулю");
         } else {
             if (num % 2 == 0) {
-                System.out.print("Число " + num + " четное");
+                System.out.print(" четное");
             } else {
-                System.out.print("Число " + num + " нечетное");
+                System.out.print(" нечетное");
             }
             if (num > 0) {
                 System.out.println(" положительное"); 
@@ -116,7 +117,7 @@ class IfElseStatementTheme {
         int historyPercent = 59;
         int programmingPercent = 91;
         int historyRating = 2;
-        int programmingRating =2;
+        int programmingRating = 2;
         
         if (historyPercent > 60 && historyPercent <= 73) {
             historyRating = 3;
@@ -152,31 +153,39 @@ class IfElseStatementTheme {
         }
 
         System.out.println("\n9. Подсчет количества банкнот \n");
-        int srcsum = 567;
-        int banknote100 = 10;
-        int banknote10 = 5;
-        int banknote1 = 50;
-        int numbanknote100 = 0;
-        int numbanknote10 = 0;
-        int numbanknote1 = 0;
-        int b100 = srcsum / 100;
+        int cash = 567;
+        int srcSum = cash;
+        int banknoteBankomat100 = 10;
+        int banknoteBankomat10 = 5;
+        int banknoteBankomat1 = 50;
+        int numBanknote100 = 0;
+        int numBanknote10 = 0;
+        int numBanknote1 = 0;
+        int banknote100 = srcSum / 100;
         
-        if (b100 <= banknote100) {
-           numbanknote100 = b100;
+        if (banknote100 <= banknoteBankomat100) {
+           numBanknote100 = banknote100;
         } else {
-            numbanknote100 = banknote100;
+            numBanknote100 = banknoteBankomat100;
         } 
-        int b10 = (srcsum - (numbanknote100 * 100)) / 10;
-        if (b10 <= banknote10) {
-            numbanknote10 = b10;
+        int banknote10 = (srcSum - (numBanknote100 * 100)) / 10;
+        
+        if (banknote10 <= banknoteBankomat10) {
+            numBanknote10 = banknote10;
+        } else  {
+            numBanknote10 = banknoteBankomat10;
+        } 
+        int banknote1 = (srcSum - (numBanknote100 * 100) - (numBanknote10 * 10)) / 1;
+        
+        if (banknote1 <= banknoteBankomat1) {
+            numBanknote1 = banknote1;
+            int sumBanknote = numBanknote100 * 100 + numBanknote10 * 10 + numBanknote1;
+            System.out.println("Сумма для выдачи (USD): " + sumBanknote);
+            System.out.println("Выдано: " + numBanknote100 + " банкнот номиналом 100 USD");
+            System.out.println("Выдано: " + numBanknote10 + " банкнот номиналом 10 USD");
+            System.out.println("Выдано: " + numBanknote1 + " банкнот номиналом 1 USD");
         } else {
-            numbanknote10 = banknote10;
-        } 
-        numbanknote1 = (srcsum - (numbanknote100 * 100) - (numbanknote10 * 10)) / 1;
-        int sumbanknote = numbanknote100 * 100 + numbanknote10 * 10 + numbanknote1;
-        System.out.println("Сумма для выдачи (USD): " + sumbanknote);
-        System.out.println("Выдано: " + numbanknote100 + " банкнот номиналом 100 USD");
-        System.out.println("Выдано: " + numbanknote10 + " банкнот номиналом 10 USD");
-        System.out.println("Выдано: " + numbanknote1 + " банкнот номиналом 1 USD");
+            System.out.println("Банкнот не хватает для выдачи нужной суммы ");
+        }
     }
 }
